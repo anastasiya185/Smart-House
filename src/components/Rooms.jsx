@@ -25,18 +25,22 @@ export default function Rooms() {
 
     return (
         <div className='roomsDiv'>
-            <h1 className='titleNameMainPage'>{currentUser}'s home:</h1>
-            {rooms.map((room, index) => (
-                <div
-                    className='roomDiv'
-                    key={room.id}
-                    style={{ backgroundColor: room.color }}>
-                    <button className='roomButton'
-                        style={{ backgroundColor: room.color }}
-                        onClick={() => toggleProductsSection(room.id)}>{room.name}</button>
-                    {openProductsMap[room.id] && <Products onClose={() => toggleProductsSection(room.id)} />}
-                </div>
-            ))}
+            <h2 className='titleNameMainPage'>{currentUser}'s home:</h2>
+            <div style={{display:"flex", flexWrap:"wrap", overflow:"auto", maxHeight:"400px"}}>
+
+                {rooms.map((room, index) => (
+                    <div
+                        className='roomDiv'
+                        key={room.id}
+                        style={{ backgroundColor: room.color }}>
+                        <button className='roomButton'
+                                style={{ backgroundColor: room.color }}
+                                onClick={() => toggleProductsSection(room.id)}>{room.name}</button>
+                        {openProductsMap[room.id] && <Products onClose={() => toggleProductsSection(room.id)} />}
+                    </div>
+                ))}
+            </div>
+
             <Fab color="primary" aria-label="add" onClick={redirectToCreateRoomPage}>
                 <AddIcon />
             </Fab>

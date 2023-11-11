@@ -48,8 +48,8 @@ export default function CreateRoom() {
     return (
         <div className='createRoomDiv'>
             <h1 className='titleNameMainPage'>{currentUser}'s home:</h1>
-            <Box>
-                <FormControl className='createRoomInput'>
+            <Box sx={{width: 300}}>
+                <FormControl className='createRoomInput' fullWidth>
                     <InputLabel>Choose a new room</InputLabel>
                     <Select
                         value={rooms}
@@ -63,16 +63,16 @@ export default function CreateRoom() {
                 </FormControl>
             </Box>
 
-            <Box>
-                <TextField className='createRoomInput'
+            <Box sx={{width: 300}}>
+                <TextField className='createRoomInput' fullWidth
                     label="Room Name"
                     variant="outlined"
                     value={roomName}
                     onChange={(e) => setRoomName(e.target.value)} />
             </Box>
 
-            <Box>
-                <FormControl className='createRoomInput'>
+            <Box sx={{width: 300}}>
+                <FormControl className='createRoomInput' fullWidth>
                     <InputLabel>Room Color</InputLabel>
                     <Select value={selectedColor} onChange={handleColorChange}>
                         <MenuItem value="red">Red</MenuItem>
@@ -87,8 +87,8 @@ export default function CreateRoom() {
                 </FormControl>
             </Box>
 
-            <Box>
-                <FormControl className='createRoomInput'>
+            <Box sx={{width: 300}}>
+                <FormControl className='createRoomInput' fullWidth>
                     <InputLabel>Choose floor</InputLabel>
                     <Select
                         value={floor}

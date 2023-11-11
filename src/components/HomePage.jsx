@@ -22,6 +22,8 @@ export default function HomePage() {
         setShowButtonRegistration(false)
         setShowButtonEntry(true)
     }
+    debugger
+    console.log({showEntry, showRegistration, showButtonEntry, showButtonRegistration})
     return (
         //!todo here i need to move the logic of appearance element 
         <div className="homePage">
