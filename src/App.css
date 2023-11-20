@@ -16,8 +16,8 @@ html, body {
   align-items: center;
   justify-content: center;
   text-align: center;
-   background: linear-gradient(45deg, #6E48AA, #FF75A0);
-   color: white;
+   background: linear-gradient(30deg, #949393, #ffffff);
+   color: #090909;
    
 }
 
@@ -75,38 +75,29 @@ html, body {
   width: 33%;
 }
 
-.signInButton{
+.signInButton, .signUpButton, .CreateAccountButton{
   width: 150px;
   height: 40px;
   border-radius: 10px;
   background-color: black;
   color: white;
   border: 0;
-}
-
-.signUpButton{
-  width: 150px;
-  height: 40px;
-  border-radius: 10px;
-  background-color: black;
-  color: white;
-  margin-top: 50px;
-  border: 0;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
 
 .signInDiv{
   flex: 1;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  align-items: center;
   overflow: auto;
 
 }
 
-.inputSignIn{
+.inputSignIn, .inputSignUp{
   width: 200px;
   height: 50px;
   border-radius: 10px;
@@ -114,16 +105,8 @@ html, body {
   color: white;
   margin-top: 30px;
   border: 0;
-}
-
-.inputSignUp{
-  width: 200px;
-  height: 50px;
-  border-radius: 10px;
-  background-color: black;
-  color: white;
-  margin-top: 30px;
-  border: 0;
+  line-height: 50px;
+  text-align: center;
 }
 
 .signUnDiv{
@@ -132,8 +115,8 @@ html, body {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  align-items: center;
   overflow: auto;
+  cursor: pointer;
 }
 
 .getStartedLinkText{
@@ -152,6 +135,7 @@ html, body {
   color: white;
   border: 0;
   margin-top: 30px;
+  cursor: pointer;
 }
 
 .mainPageDiv{
@@ -178,6 +162,7 @@ html, body {
 
 .addRoomButton {
   font-size: 24px;
+  cursor: pointer;
 }
 
 .titleMainPage {
@@ -209,24 +194,39 @@ html, body {
   flex: 1;
   display: flex;
   justify-content: space-around;
-  flex-direction: row;
   align-items: center;
+  flex-direction: column;
+}
+
+.roomContainer{
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
   width: 100vh;
   overflow: auto;
   text-align: center;
   height: 100vh;
+  padding: 20px;
 }
 
 .roomDiv{
   width: 100px;
   height: 100px;
-  margin-right: 100px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .roomButton{
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   border: none;
+  cursor: pointer;
 }
 
 .productsDiv{
@@ -234,20 +234,32 @@ html, body {
   flex-direction: column;
   align-items: flex-start;
   width: 200px;
+  border: 2px solid #000;
+  border-radius: 10px;
 }
 
-.createRoomInput{
-  width: 80px;
+.createProductInput{
+  width: 98%;
   height: 20px;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  background-color: #f5f5f5;
 }
 
 .buttonAddProduct{
-  width: 50px;
-  height: 30px;
+  width: 100%;
+  height: 20px;
   font-size: 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #4c98af;
+  color: #fff;
 }
 
 .deleteButton{
   color: red;
+  cursor: pointer;
 }
 

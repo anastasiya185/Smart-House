@@ -21,26 +21,26 @@ export default function SignIn() {
 
     useEffect(() => {
         if (isLogged) {
-            navigate('/mainpage', { replace: true });
+            navigate('/mainpage', {replace: true});
         }
     }, [isLogged])
 
     return (
-        isLoad ? <span>loading...</span> :
-            (<div className="signInDiv">
-                <input type="text"
-                    placeholder='user name'
-                    className='inputSignIn'
-                    value={userName}
-                    onChange={(e) => setUserName(e.target.value)}
-                />
-                <input type="text"
-                    placeholder='password'
-                    className='inputSignIn'
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)} />
+    isLoad ? <span>loading...</span> :
+        (<div className="signInDiv">
+            <input type="text"
+                   placeholder='user name'
+                   className='inputSignIn'
+                   value={userName}
+                   onChange={(e) => setUserName(e.target.value)}
+            />
+            <input type="password"
+                   placeholder='password'
+                   className='inputSignIn'
+                   value={password}
+                   onChange={(e) => setPassword(e.target.value)}/>
 
-                <button onClick={login} className='submitButton'>Submit</button>
-            </div>)
-    )
+            <button onClick={login} className='submitButton'>Submit</button>
+        </div>)
+)
 }
