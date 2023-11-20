@@ -125,7 +125,3 @@ object-assign
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-
-//!todo here i need to move the logic of appearance element 
-
-//!todo need to move all states to app and create contex here
